@@ -1,0 +1,4 @@
+@EndUserText.label: 'Vehicle Service RAP'
+define service ZUI_VEHICLE_RMR {
+  expose ZI_VEHICLE_RMR as Vehicle;
+}
