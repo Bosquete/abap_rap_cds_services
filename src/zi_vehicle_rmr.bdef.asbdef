@@ -1,0 +1,23 @@
+managed implementation in class zbp_i_vehicle_rmr unique;
+strict ( 2 );
+
+define behavior for ZI_VEHICLE_RMR
+persistent table ZTE_VEHICLE_RMR
+lock master
+authorization master ( instance )
+
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+   mapping for ZTE_VEHICLE_RMR {
+    VehicleUUID      = VEHICLEUUID;
+    VehicleTypeCode  = VEHICLETYPE;
+    }
+
+  validation validate_brand on save { field Brand; }
+
+
+
+}
